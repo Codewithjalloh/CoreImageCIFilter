@@ -14,6 +14,8 @@
 		580E5FC61D495AF800523E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580E5FC41D495AF800523E7A /* LaunchScreen.storyboard */; };
 		580E5FD11D495AF800523E7A /* CoreImageCIFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E5FD01D495AF800523E7A /* CoreImageCIFilterTests.swift */; };
 		580E5FDC1D495AF800523E7A /* CoreImageCIFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E5FDB1D495AF800523E7A /* CoreImageCIFilterUITests.swift */; };
+		580E5FEA1D495B3100523E7A /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 580E5FE91D495B3100523E7A /* image.jpg */; };
+		580E5FEC1D495B5200523E7A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580E5FEB1D495B5200523E7A /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		580E5FD71D495AF800523E7A /* CoreImageCIFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageCIFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		580E5FDB1D495AF800523E7A /* CoreImageCIFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageCIFilterUITests.swift; sourceTree = "<group>"; };
 		580E5FDD1D495AF800523E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		580E5FE91D495B3100523E7A /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		580E5FEB1D495B5200523E7A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580E5FEC1D495B5200523E7A /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		580E5FAF1D495AF700523E7A = {
 			isa = PBXGroup;
 			children = (
+				580E5FEB1D495B5200523E7A /* CoreImage.framework */,
 				580E5FBA1D495AF800523E7A /* CoreImageCIFilter */,
 				580E5FCF1D495AF800523E7A /* CoreImageCIFilterTests */,
 				580E5FDA1D495AF800523E7A /* CoreImageCIFilterUITests */,
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				580E5FBB1D495AF800523E7A /* AppDelegate.swift */,
+				580E5FE91D495B3100523E7A /* image.jpg */,
 				580E5FBD1D495AF800523E7A /* ViewController.swift */,
 				580E5FBF1D495AF800523E7A /* Main.storyboard */,
 				580E5FC21D495AF800523E7A /* Assets.xcassets */,
@@ -232,6 +239,7 @@
 				580E5FC61D495AF800523E7A /* LaunchScreen.storyboard in Resources */,
 				580E5FC31D495AF800523E7A /* Assets.xcassets in Resources */,
 				580E5FC11D495AF800523E7A /* Main.storyboard in Resources */,
+				580E5FEA1D495B3100523E7A /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
