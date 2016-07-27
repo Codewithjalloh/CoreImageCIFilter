@@ -18,30 +18,36 @@ class ViewController: UIViewController {
     }
     
     
-    // outlet and action 
+    // outlet and action
     @IBOutlet weak var myImg: UIImageView!
     
     @IBAction func sepia(sender: UIButton) {
+        applyFilter(1)
         
     }
     
     @IBAction func vignette(sender: UIButton) {
+        applyFilter(2)
         
     }
     
     @IBAction func invert(sender: UIButton) {
+        applyFilter(3)
         
     }
     
     @IBAction func photo(sender: UIButton) {
+        applyFilter(4)
         
     }
     
     @IBAction func perspective(sender: UIButton) {
+        applyFilter(5)
         
     }
     
     @IBAction func gussian(sender: UIButton) {
+        applyFilter(6)
         
     }
     
@@ -51,12 +57,31 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func applyFilter(numberFilter: Int) {
+        let filePath: NSString = NSBundle.mainBundle().pathForResource("image", ofType: "jpg")!
+        let fileUrl: NSURL = NSURL(fileURLWithPath: filePath as String)
+        let inputImage: CIImage = CIImage(contentsOfURL: fileUrl)!
+        
+        
+        switch numberFilter {
+        case 1:
+            let filter = CIFilter(name: "CISepiaTone")
+            filter!.setValue(inputImage, forKey: kCIInputImageKey)
+        default:
+            <#code#>
+        }
+        
+    }
 
 }
 
