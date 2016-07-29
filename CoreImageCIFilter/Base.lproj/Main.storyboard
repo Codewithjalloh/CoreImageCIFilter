@@ -14,13 +14,80 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Mp5-2N-lfx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-69-89h">
+                                <rect key="frame" x="5" y="378" width="403" height="31"/>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGZ-z9-XYb"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te8-hN-8Gr">
+                                <rect key="frame" x="20" y="427" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="sepia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yna-y3-eWy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br4-cS-x4q">
+                                <rect key="frame" x="206" y="427" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Vignette"/>
+                                <connections>
+                                    <action selector="vignette:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Jt-KH-mFY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCQ-dc-I6p">
+                                <rect key="frame" x="20" y="471" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Invert"/>
+                                <connections>
+                                    <action selector="invert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADR-rc-Sgu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIW-aF-YLN">
+                                <rect key="frame" x="206" y="471" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="photo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSn-Jt-xs0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3Y-t4-quM">
+                                <rect key="frame" x="20" y="520" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Perspective"/>
+                                <connections>
+                                    <action selector="perspective:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0s-Ar-ZQM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oL-xC-abR">
+                                <rect key="frame" x="206" y="520" width="174" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Gaussian"/>
+                                <connections>
+                                    <action selector="gussian:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hoI-gT-b6G"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="myImg" destination="Mp5-2N-lfx" id="WQW-St-d7Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="425" y="174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image.jpg" width="640" height="480"/>
+    </resources>
 </document>
