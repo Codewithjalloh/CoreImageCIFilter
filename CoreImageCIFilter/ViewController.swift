@@ -116,6 +116,12 @@ class ViewController: UIViewController {
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
+        case 6:
+            let filter : CIFilter = CIFilter(name: "CIGaussianBlur")!
+            filter.setValue(inputImage, forKey: kCIInputImageKey)
+            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let img: UIImage = UIImage(CIImage: outputImage)
+            myImg.image = img
             
             
             
