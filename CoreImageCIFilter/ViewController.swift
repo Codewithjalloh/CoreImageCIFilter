@@ -10,7 +10,7 @@ import UIKit
 import CoreImage
 
 class ViewController: UIViewController {
-    var slierValue: Float = 0.0
+    var sliderValue: Float = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func slider(sender: UISlider) {
-        slierValue = sender.value
+        sliderValue = sender.value
         
     }
     
@@ -75,12 +75,26 @@ class ViewController: UIViewController {
         
         switch numberFilter {
         case 1:
-            let filter = CIFilter(name: "CISepiaTone")
-            filter!.setValue(inputImage, forKey: kCIInputImageKey)
-            filter?.setValue(slierValue, forKey: "InputIntensity")
-            let outputImage : CIImage = filter?.valueForKey(kCIInputImageKey) as!  CIImage
+            let filter = CIFilter(name: "CISepiaTone")!
+            filter.setValue(inputImage, forKey: kCIInputImageKey)
+            filter.setValue(sliderValue, forKey: "InputIntensity")
+            
+            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
+            
+            
+            
+        case 2:
+            let filter : CIFilter = CIFilter(name: "CIVignette")!
+            filter.setValue(inputImage, forKey: kCIInputImageKey)
+            filter.setValue(sliderValue, forKey: "InputRadius")
+            filter.setValue(sliderValue, forKey: "InputIntensity")
+            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let img: UIImage = UIImage(CIImage: outputImage)
+            myImg.image = img
+            
+            
         default:
             print("Test....")
         }
