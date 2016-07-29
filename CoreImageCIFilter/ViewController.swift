@@ -77,8 +77,12 @@ class ViewController: UIViewController {
         case 1:
             let filter = CIFilter(name: "CISepiaTone")
             filter!.setValue(inputImage, forKey: kCIInputImageKey)
+            filter?.setValue(slierValue, forKey: "InputIntensity")
+            let outputImage : CIImage = filter?.valueForKey(kCIInputImageKey) as!  CIImage
+            let img: UIImage = UIImage(CIImage: outputImage)
+            myImg.image = img
         default:
-            <#code#>
+            print("Test....")
         }
         
     }
