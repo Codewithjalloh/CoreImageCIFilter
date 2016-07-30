@@ -9,6 +9,9 @@
 import UIKit
 import CoreImage
 
+// fix erros
+
+
 class ViewController: UIViewController {
     var sliderValue: Float = 0.0
 
@@ -76,6 +79,7 @@ class ViewController: UIViewController {
         switch numberFilter {
         case 1:
             let filter = CIFilter(name: "CISepiaTone")!
+            
             filter.setValue(inputImage, forKey: kCIInputImageKey)
             filter.setValue(sliderValue, forKey: "InputIntensity")
             
