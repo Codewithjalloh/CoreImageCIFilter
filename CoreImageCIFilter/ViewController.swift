@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-// fix erros
+
 
 
 class ViewController: UIViewController {
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             filter.setValue(inputImage, forKey: kCIInputImageKey)
             filter.setValue(sliderValue, forKey: "InputIntensity")
             
-            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let outputImage : CIImage = filter.valueForKey(kCIOutputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
@@ -102,28 +102,28 @@ class ViewController: UIViewController {
         case 3:
             let filter : CIFilter = CIFilter(name: "CIColorInvert")!
             filter.setValue(inputImage, forKey: kCIInputImageKey)
-            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let outputImage : CIImage = filter.valueForKey(kCIOutputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
         case 4:
             let filter : CIFilter = CIFilter(name: "CIPhotoEffectMono")!
             filter.setValue(inputImage, forKey: kCIInputImageKey)
-            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let outputImage : CIImage = filter.valueForKey(kCIOutputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
         case 5:
             let filter : CIFilter = CIFilter(name: "CIPerspectiveTransform")!
             filter.setValue(inputImage, forKey: kCIInputImageKey)
-            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let outputImage : CIImage = filter.valueForKey(kCIOutputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
         case 6:
             let filter : CIFilter = CIFilter(name: "CIGaussianBlur")!
             filter.setValue(inputImage, forKey: kCIInputImageKey)
-            let outputImage : CIImage = filter.valueForKey(kCIInputImageKey) as!  CIImage
+            let outputImage : CIImage = filter.valueForKey(kCIOutputImageKey) as!  CIImage
             let img: UIImage = UIImage(CIImage: outputImage)
             myImg.image = img
             
